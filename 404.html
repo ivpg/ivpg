@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script type="text/javascript">
+    (function() {
+      // Get the current path (e.g., "/test" or "/another/path")
+      var currentPath = window.location.pathname;
+      
+      // Define the base URL of your target site
+      var targetBase = "https://ivpg.hpi3.de";
+      
+      // Build the new URL. For the root ("/"), this will be just the base URL.
+      var newUrl = targetBase + currentPath;
+      
+      // Optionally, if you want to redirect the root ("/") to the main site explicitly,
+      // you can add a condition like:
+      // if (currentPath === "/" || currentPath === "") {
+      //   newUrl = targetBase;
+      // }
+      
+      // Redirect the browser to the new URL
+      window.location.replace(newUrl);
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting... If you are not automatically redirected, <a id="redirectLink" href="https://ivpg.hpi3.de">click here</a>.</p>
+</body>
+</html>
